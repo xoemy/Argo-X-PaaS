@@ -1,4 +1,6 @@
-FROM node:latest
+FROM node:18-alpine AS builder
+ENV BUILDTIME_ENV_EXAMPLE=${BUILDTIME_ENV_EXAMPLE}
+
 EXPOSE 3000
 WORKDIR /app
 ADD file.tar.gz /app/
